@@ -1,0 +1,413 @@
+<!-- Projeto: Site Burger Good -->
+<!-- Arquivo: cardapio.html -->
+<!-- Autor: Vinícius Alarcon Vilela-->
+<!-- Criação: 25/11/2021 -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio | Burger Good</title>
+
+    <!----- CSS ----->
+    <link rel="stylesheet" href="css/cardapio.css">
+
+    <script src="https://kit.fontawesome.com/6910838e09.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <a href="#home">
+            <img src="img/H-logo.png" class="logo" alt="logo" >
+        </a>
+
+        <form action="" class="search-form">
+            <input type="search" name="" placeholder="Busque por um produto" id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+        <div class="icons">
+
+            <div id="search-btn" class="fas fa-search"></div>
+            <div id="login-btn" class="fas fa-user"></div>
+            <div id="cart-btn" class="fas fa-shopping-cart"></div>
+
+        </div>
+
+        <!-- CARRINHO -->
+        <div class="cart-items-container">
+
+            <div class="cart-item">
+    
+                <span class="fas fa-times"></span>
+                <img src="img/cardapio/Burger-1.png" alt="">
+                <div class="conteudo">
+                    <h3>cart item 01</h3>
+                    <div class="preco-cart">R$ R$ 22,25</div>
+                </div>
+            </div>
+            
+            <div class="cart-item">
+    
+                <span class="fas fa-times"></span>
+                <img src="img/cardapio/Burger-2.png" alt="">
+                <div class="conteudo">
+                    <h3>cart item 02</h3>
+                    <div class="preco-cart">R$ 26,50</div>
+                </div>
+            </div>
+    
+            <div class="cart-item">
+    
+                <span class="fas fa-times"></span>
+                <img src="img/cardapio/Burger-3.png" alt="">
+                <div class="conteudo">
+                    <h3>cart item 03</h3>
+                    <div class="preco-cart">R$ 32,28</div>
+                </div>
+            </div>
+            <a href="" class="btn">fechar pedido</a>
+        </div>
+    </header>
+
+    <!-- LOGIN -->
+    <div class="login-form-container">
+
+        <div id="close-login-btn" class="fas fa-times"></div>
+
+        <form action="php/testLogin.php" method="POST">
+            <h3>já tenho conta</h3>
+            <span>usuário</span>
+            <input type="email" name="email" class="usu-senha" placeholder="e-mail" id="" required>
+            <span>senha</span>
+            <input type="password" name="senha" class="usu-senha" placeholder="senha" id="" required>
+            <div class="checkbox">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me"> lembre-me</label>
+            </div>
+            <input type="submit" name="entrar" id="entrar" value="entrar" class="btn">
+            <p> esqueci sua senha ? <a href="#">clique aqui</a></p>
+            <p> ainda não possui uma conta ? <a href="#" id="crie-uma">crie uma</a></p>
+        </form>
+    </div>
+    <!-- SIGN IN -->
+    <div class="sign-in-form-container">
+
+        <div id="close-sign-in-btn" class="fas fa-times"></div>
+
+        <form action="php/formulario.php" method="POST">
+            <h3>Insira seus dados</h3>
+            <!-- <span>Nome</span> -->
+            <input type="text" name="nome" class="sign-in-box" placeholder="nome completo" id="" required>
+            <label for=""></label>
+            <!-- <span>CPF</span> -->
+            <input type="text" name="cpf" class="sign-in-box" placeholder="CPF" id="" required>
+            <!-- <span>Aniversário</span> -->
+            <input type="text" name="aniversario" class="sign-in-box" placeholder="aniversário" id="" required>
+            <!-- <span>E-mail</span> -->
+            <input type="email" name="email" class="sign-in-box" placeholder="e-mail" id="" required>
+            <!-- <span>Celular</span> -->
+            <input type="tel" name="celular" class="sign-in-box" placeholder="celular" id="" required>
+            <!-- <span>Senha</span> -->
+            <input type="password" name="senha" class="sign-in-box" placeholder="senha" id="" required>
+            <!-- <span>Repetir Senha</span> -->
+            <input type="password" name="repet_senha" class="sign-in-box" placeholder="repetir senha" id="" required>
+            <div class="checkbox">
+                <input type="checkbox" name="" id="termos-politicas" required>
+                <label for="termos-politicas"> Li e estou de acordo com os <a href="https://www.lgpdbrasil.com.br/politica-de-privacidade/" target="_blank">Termos e Políticas</a>.</label>
+            </div>
+            <input type="submit" name="submit" value="confirmar" class="btn">
+            <p> já possui cadastro ? <a href="#" id="acessar-conta">acesse sua conta aqui</a></p>
+        </form>
+    </div>
+
+    
+    <section class="home" id="home">
+    </section>
+    <!-- MENU SECTION -->
+    <section class="burger" id="burger">
+        <h1 class="heading">burger</h1>
+        
+        <div class="menu-container">
+            <!-- Box 1 -->
+            <div class="box">
+                <div class="box-text">
+                    <h2 class="title-item">Smash Relax</h2>
+                    <p class="descricao-item">Pão Brioche, Smash De 100g E Queijo. Nossa Deliciosa Maionese Defumada, Ketchup E Mostarda.</p>
+                    <div class="preco">
+                        <span class="descrição-preço">A partir de</span>
+                        <span class="valor-preço">R$ R$ 22,25</span>
+                    </div>
+                </div>
+                <div class="box-img">
+                    <img src="img/cardapio/Burger-1.png" alt="#">
+                </div>
+                <div class="cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+
+            <!-- Box 2 -->
+            <div class="box">
+                <div class="box-text">
+                    <h2 class="title-item">Smash Good Vibes</h2>
+                    <p class="descricao-item">Pão Brioche, Smash De 100g,Queijo, Alface E Tomate. Nossa Deliciosa Maionese Defumada, Ketchup E Mostarda.</p>
+                    <div class="preco">
+                        <span class="descrição-preço">A partir de</span>
+                        <span class="valor-preço">R$ 26,50</span>
+                    </div>
+                </div>
+                <div class="box-img">
+                    <img src="img/cardapio/Burger-2.png" alt="#">
+                </div>
+                <div class="cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+            <!-- Box 3 -->
+            <div class="box">
+                <div class="box-text">
+                    <h2 class="title-item">Smash Alucinante
+                    </h2>
+                    <p class="descricao-item">Pão Brioche, Smash De 100g, Queijo, Shitake, Cispy De Cebola E Molho Aioli. Nossa Deliciosa Maionese Defumada, Ketchup E Mostarda.</p>
+                    <div class="preco">
+                        <span class="descrição-preço">A partir de</span>
+                        <span class="valor-preço">R$ 32,28</span>
+                    </div>
+                </div>
+                <div class="box-img">
+                    <img src="img/cardapio/Burger-3.png" alt="#">
+                </div>
+                <div class="cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+            <!-- Box 4 -->
+            <div class="box">
+                <div class="box-text">
+                    <h2 class="title-item">Smash Felicidade Pura
+                    </h2>
+                    <p class="descricao-item">Pão Brioche, Smash De 100g, Queijo E Bacon. Nossa Deliciosa Maionese Defumada, Ketchup E Mostarda.</p>
+                    <div class="preco">
+                        <span class="descrição-preço">A partir de</span>
+                        <span class="valor-preço">R$ 30,25</span>
+                    </div>
+                </div>
+                <div class="box-img">
+                    <img src="img/cardapio/Burger-4.png" alt="#">
+                </div>
+                <div class="cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+            <!-- Box 5 -->
+            <div class="box">
+                <div class="box-text">
+                    <h2 class="title-item">Smash Alegria De Montão
+                    </h2>
+                    <p class="descricao-item">Pão Brioche, Duplo Smash De 100g E Queijo. Nossa Deliciosa Maionese Defumada, Ketchup E Mostarda.</p>
+                    <div class="preco">
+                        <span class="descrição-preço">A partir de</span>
+                        <span class="valor-preço">R$ 35,50</span>
+                    </div>
+                </div>
+                <div class="box-img">
+                    <img src="img/cardapio/Burger-5.png" alt="#">
+                </div>
+                <div class="cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+
+            <!-- Box 6 -->
+            <div class="box">
+                <div class="box-text">
+                    <h2 class="title-item">Smash Curtição</h2>
+                    <p class="descricao-item">Pão Brioche, Duplo Smash De 100g, Queijo E Bacon. Nossa Deliciosa Maionese Defumada, Ketchup E Mostarda.</p>
+                    <div class="preco">
+                        <span class="descrição-preço">A partir de</span>
+                        <span class="valor-preço">R$ 38,25</span>
+                    </div>
+                </div>
+                <div class="box-img">
+                    <img src="img/cardapio/Burger-6.png" alt="#">
+                </div>
+                <div class="cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="burger" id="burger">
+        <h1 class="heading">entradas</h1>
+        
+        <div class="menu-container">
+            <!-- Box 1 -->
+            <div class="box">
+                <div class="box-text">
+                    <h2 class="title-item">Fritas classicas</h2>
+                    <p class="descricao-item">Porção individual de batata frita com sal.</p>
+                    <div class="preco">
+                        <span class="descrição-preço">A partir de</span>
+                        <span class="valor-preço">R$ R$ 12,00</span>
+                    </div>
+                </div>
+                <div class="box-img">
+                    <img src="img/cardapio/Entrada-1.jpg" alt="#">
+                </div>
+                <div class="cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+
+            <!-- Box 2 -->
+            <div class="box">
+                <div class="box-text">
+                    <h2 class="title-item">fritas com cheddar e bacon</h2>
+                    <p class="descricao-item">Fritas cobertas com bacon crocante e cheddar.</p>
+                    <div class="preco">
+                        <span class="descrição-preço">A partir de</span>
+                        <span class="valor-preço">R$ 24,00</span>
+                    </div>
+                </div>
+                <div class="box-img">
+                    <img src="img/cardapio/Entrada-2.jpg" alt="#">
+                </div>
+                <div class="cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+            <!-- Box 3 -->
+            <div class="box">
+                <div class="box-text">
+                    <h2 class="title-item">Batata Rústica</h2>
+                    <p class="descricao-item">Porção individual, temperada com sal. Acompanha molho BBQ.</p>
+                    <div class="preco">
+                        <span class="descrição-preço">A partir de</span>
+                        <span class="valor-preço">R$ 13,00</span>
+                    </div>
+                </div>
+                <div class="box-img">
+                    <img src="img/cardapio/Entrada-3.jpg" alt="#">
+                </div>
+                <div class="cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+            <!-- Box 4 -->
+            <div class="box">
+                <div class="box-text">
+                    <h2 class="title-item">Onions Rings</h2>
+                    <p class="descricao-item">Porção com 18 onions. Acompanha Molho BBQ.</p>
+                    <div class="preco">
+                        <span class="descrição-preço">A partir de</span>
+                        <span class="valor-preço">R$ 24,00</span>
+                    </div>
+                </div>
+                <div class="box-img">
+                    <img src="img/cardapio/Entrada-4.jpg" alt="#">
+                </div>
+                <div class="cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="burger" id="burger">
+        <h1 class="heading">sobremesas</h1>
+        
+        <div class="menu-container">
+            <!-- Box 1 -->
+            <div class="box">
+                <div class="box-text">
+                    <h2 class="title-item">Fatia de Torta Brigadeiro</h2>
+                    <p class="descricao-item">Bolo de chocolate recheado com brigadeiro.</p>
+                    <div class="preco">
+                        <span class="descrição-preço">A partir de</span>
+                        <span class="valor-preço">R$ 22,50</span>
+                    </div>
+                </div>
+                <div class="box-img">
+                    <img src="img/cardapio/Sobremesa-1.jpg" alt="#">
+                </div>
+                <div class="cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+
+            <!-- Box 2 -->
+            <div class="box">
+                <div class="box-text">
+                    <h2 class="title-item">Fatia de Torta de Limão</h2>
+                    <p class="descricao-item">Casquinha tradicional assequilhada recheada com creme especial de limão e cobertura de marshmallow caseiro.</p>
+                    <div class="preco">
+                        <span class="descrição-preço">A partir de</span>
+                        <span class="valor-preço">R$ 17,20</span>
+                    </div>
+                </div>
+                <div class="box-img">
+                    <img src="img/cardapio/Sobremesa-2.jpg" alt="#">
+                </div>
+                <div class="cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+            <!-- Box 3 -->
+            <div class="box">
+                <div class="box-text">
+                    <h2 class="title-item">Fatia de Torta Red Velvet</h2>
+                    <p class="descricao-item">Bolo amanteigado com leve toque de limão, recheado e coberto com creme à base de cream cheese e leite condensado.</p>
+                    <div class="preco">
+                        <span class="descrição-preço">A partir de</span>
+                        <span class="valor-preço">R$ 22,50</span>
+                    </div>
+                </div>
+                <div class="box-img">
+                    <img src="img/cardapio/Sobremesa-3.jpg" alt="#">
+                </div>
+                <div class="cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+            <!-- Box 4 -->
+            <div class="box">
+                <div class="box-text">
+                    <h2 class="title-item">Banana Split</h2>
+                    <p class="descricao-item">Banana servida com três bolas de sorvete, cobertura à escolha, creme chantilly e decorada com cerejas.</p>
+                    <div class="preco">
+                        <span class="descrição-preço">A partir de</span>
+                        <span class="valor-preço">R$ 28,50</span>
+                    </div>
+                </div>
+                <div class="box-img">
+                    <img src="img/cardapio/Sobremesa-4.jpg" alt="#">
+                </div>
+                <div class="cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LOADER -->
+    <!-- <div class="loader-container">
+        <img src="img/loader.gif" alt="">
+    </div> -->
+
+     <!-- COPYRIGHT SECTION -->
+    <footer class="copyright">
+        <p>&#169; 2021 - burger good - Desenvolvido por Vinícius Alarcon</p>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/cardapio.js"></script>
+</body>
+</html>

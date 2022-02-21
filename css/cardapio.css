@@ -1,0 +1,609 @@
+/* Projeto: Site Burger Good */
+/* Arquivo: cardapio.css */
+/* Autor: Vinícius Alarcon Vilela */
+/* Criação: 25/11/2021 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Fredericka+the+Great&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+    --main-color: #ffb200;
+    --hover-main-color: #ffc847;
+    --border: .1rem solid rgba(0,0,0,.1);
+    --border-hover: .1rem solid black;
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1)
+    --text-color: #1e1c2a;
+    --header-text-color: #fff;
+    --header-text-scroll-color: #000;
+    --bg-color: #f0f1f1;
+    --header-scroll-color: rgba(255, 255, 255, 0.96);
+    --n-btn-bg-color: #000;
+    --n-btn-color: #fff;
+  
+    --big-font: 4rem;
+    --homeH1-font: 7rem;
+    --homeH2-font: 3rem;
+    --h1-font: 2.7rem;
+    --h2-font: 2.24rem;
+    --p-font: 1.5rem;
+    --rodape-font: #000;
+}
+*{
+    /* font-family: 'Source Sans Pro', sans-serif; */
+    font-family: "Poppins", sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    list-style: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    scroll-padding-top: 3.75rem;
+    transition: all .2s linear;
+}
+*::selection {
+    background: var(--main-color);
+    color: #fff;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+/* SCROLLBAR BUTTON*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+::-webkit-scrollbar-button {
+    background-color: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--hover-main-color);
+}
+
+
+
+
+section {
+    padding: 2rem 8%;
+}
+body {
+    background-color: #f0f1f1;
+}
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    border-radius: .5rem;
+    color: #fff;
+    background: var(--main-color);
+    font-size: 1.7rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+.btn:hover {
+    background: var(--hover-main-color);
+}
+.heading {
+    text-align: left;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color: var(--main-color);
+    text-shadow: rgba(255, 255, 255, 0.301) 0.1em 0.1em 0.2em;
+}
+/* LOADER */
+.loader-container{
+    position: fixed;
+    top:0; left:0;
+    height:100%; 
+    width:100%;
+    z-index: 10000;
+    background:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.loader-container img{
+    width:35rem;
+}
+
+.loader-container.fade-out{
+    top:-110%;
+    opacity:0;
+}
+
+
+/* HEADER ------*/
+header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+    padding: 5rem 9%;
+    background-color: transparent;
+    box-shadow: var(--box-shadow);
+    transition: all .6s;
+}
+
+header .logo{
+    margin-top: .5rem;
+    width: auto; height: auto;
+    max-height: 6rem;
+    
+}
+
+header .search-form {
+    width: 45rem;
+    height: 3.5rem;
+    border: var(--border);
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: .5rem;
+}
+
+header .search-form input {
+    font-size: 1.6rem;
+    padding: 0 1.2rem;
+    height: 100%;
+    width: 100%;
+    text-transform: none;
+    color: black;
+}
+
+header .search-form label {
+    font-size: 2.5rem;
+    padding-right: 1.5rem;
+    color: black;
+    cursor: pointer;
+}
+header .search-form label:hover {
+    color: var(--main-color);
+}
+
+header .icons div {
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+header .icons div:hover {
+    color: var(--main-color);
+}
+
+#search-btn {
+    display: none;
+}
+
+.headerscroll {
+    padding: 3.5rem 9%;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: var(--box-shadow);
+}
+.headerscroll .icons div {
+    color: black;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/banner1.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-top: 25rem;
+    padding-bottom: 12rem;
+    filter: brightness(30%);
+}
+
+/* LOGIN */
+.login-form-container {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0; right: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0,5s;
+}
+.login-form-container.active {
+    visibility: visible;
+    opacity: 1;
+}
+.login-form-container form {
+    background: #fff;
+    border: var(--border);
+    width: 40rem;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    margin: 2rem;
+}
+.login-form-container form h3 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: black;
+    text-align: center;
+}
+.login-form-container form span {
+    display: block;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+.login-form-container form .usu-senha {
+    width: 100%;
+    margin: .7rem 0;
+    font-size: 1.6rem;
+    border: var(--border);
+    border-radius: .5rem;
+    padding: 1rem 1.2rem;
+    color: black;
+    text-transform: none;
+}
+.login-form-container form .usu-senha::placeholder {
+    text-transform: uppercase;
+}
+.login-form-container form .checkbox {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem 0;
+}
+.login-form-container form .checkbox label {
+    font: 1.6rem;
+    color: grey;
+    cursor: pointer;
+}
+.login-form-container form .btn {
+    text-align: center;
+    width: 100%;
+    margin: 1.5rem 0;
+}
+.login-form-container form p {
+    padding-top: .8rem;
+    color: grey;
+    font-size: 1.5rem;
+}
+.login-form-container form p a {
+    color: var(--main-color);
+    text-decoration: underline;
+}
+.login-form-container #close-login-btn {
+    position: absolute;
+    top: 1.5rem; right: 2.5rem;
+    font-size: 4rem;
+    color: black;
+    cursor: pointer;
+}
+.login-form-container #close-login-btn:hover {
+    color: var(--main-color);
+}
+
+/* SIGN IN */
+.sign-in-form-container {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0; right: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0,5s;
+}
+.sign-in-form-container.active {
+    visibility: visible;
+    opacity: 1;
+}
+.sign-in-form-container form {
+    background: #fff;
+    border: var(--border);
+    width: 40rem;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    margin: 2rem;
+}
+.sign-in-form-container form h3 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: black;
+    text-align: center;
+}
+.sign-in-form-container form span {
+    display: block;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+
+.sign-in-form-container form .sign-in-box {
+    width: 100%;
+    margin: .7rem 0;
+    font-size: 1.6rem;
+    border: var(--border);
+    border-radius: .5rem;
+    padding: 1rem 1.2rem;
+    color: black;
+    text-transform: none;
+}
+.sign-in-form-container form .sign-in-box::placeholder {
+    text-transform: uppercase;
+}
+.sign-in-form-container form .checkbox {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem 0;
+}
+.sign-in-form-container form .checkbox label {
+    font: 1.6rem;
+    color: grey;
+    cursor: pointer;
+}
+.sign-in-form-container form .checkbox label a {
+    color: var(--main-color);
+    text-decoration: underline;
+}
+.sign-in-form-container form .btn {
+    text-align: center;
+    width: 100%;
+    margin: 1.5rem 0;
+}
+.sign-in-form-container form p {
+    padding-top: .8rem;
+    color: grey;
+    font-size: 1.5rem;
+}
+.sign-in-form-container form p a {
+    color: var(--main-color);
+    text-decoration: underline;
+}
+.sign-in-form-container #close-sign-in-btn {
+    position: absolute;
+    top: 1.5rem; right: 2.5rem;
+    font-size: 4rem;
+    color: black;
+    cursor: pointer;
+}
+.sign-in-form-container #close-sign-in-btn:hover {
+    color: var(--main-color);
+}
+
+
+/* CARRINHO */
+header .cart-items-container {
+    position: absolute;
+    top: 100%; right: 0;
+    height: 40rem;
+    width: 35rem;
+    background: #fff;
+    padding: 0 1.5rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0,5s;
+}
+
+header .cart-items-container.active {
+    visibility: visible;
+    opacity: 1;
+}
+header .cart-items-container .cart-item {
+    position: relative;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+header .cart-items-container .cart-item .fa-times {
+    position: absolute;
+    top: 1rem; right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: black;
+}
+header .cart-items-container .cart-item .fa-times:hover {
+    color: var(--main-color);
+}
+header .cart-items-container .cart-item img {
+    height: 7rem;
+    border-radius: 10px;
+}
+header .cart-items-container .cart-item .conteudo h3 {
+    font-size: 2rem;
+    color: black;
+    padding-bottom: .5rem;
+}
+header .cart-items-container .cart-item .conteudo .preco-cart {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--main-color);
+    padding-bottom: 1.5rem;
+}
+header .cart-items-container .btn {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* CARDÁPIO */
+.burger .menu-container {
+    /* background-color: tomato; */
+    display: flex;
+    flex-wrap: wrap;
+}
+.burger .menu-container .box {
+    position: relative;
+    background-color: white;
+    flex: 1 1 36.5rem;
+    max-width: 38rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 5px 5px 5px 5px;
+    cursor: pointer;
+    transition: all .5s;
+}
+.burger .menu-container .box:hover {
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+.burger .menu-container .box:hover .cart {
+    display: block;
+}
+
+.burger .menu-container .box .cart {
+    display: none;
+    position: absolute;
+    font-size: 15px;
+    right: 10px;
+    bottom: 10px;
+    padding: 2px 5px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+}
+.burger .menu-container .box .box-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.burger .menu-container .box .box-text .title-item {
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.5rem;
+    margin-bottom: 5px;
+}
+.burger .menu-container .box .box-text .descricao-item {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+.burger .menu-container .box .box-text .preco {
+    display: flex;
+    align-items: flex-start;
+}
+.burger .menu-container .box .box-text .preco .descrição-preço {
+    font-size: 13px;
+    line-height: 2rem;
+    margin-right: 3px;
+}
+.burger .menu-container .box .box-text .preco .valor-preço {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 2rem;
+}
+.burger .menu-container .box .box-img {
+    margin-left: 5px;
+    width: 10rem;
+    height: 10rem;
+}
+.burger .menu-container .box .box-img img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 10px;
+}
+/* COPYRIGHT SECTION */
+.copyright {
+    margin-bottom: 0;
+    font-size: 1.6rem;
+    color: white;
+    background-color: black;
+    text-align: center;      
+    line-height: 5rem; 
+}
+
+/* MEDIA QUERIES STARTs */
+@media (max-width:991px){
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 3.5rem;
+    }
+    
+    section {
+        padding: 2rem;
+    }
+    .burger .menu-container {
+        justify-content: center;
+        align-items: center;
+
+    }
+    .burger .menu-container .box{
+        display: flex;
+        flex: 1 1 100rem;
+        min-width: 90%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width:768px){
+
+    #search-btn {
+        display: inline-block;
+    }
+    header {
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+        position: relative;
+    }
+    header .search-form {
+        position: absolute;
+        top: -115%; right: 2rem;
+        width: 90%;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    }
+    header .search-form.active {
+        top: 115%
+    } 
+    header .icons div {
+        color: black;
+    }
+}
+@media (max-width:450px){
+    html {
+        font-size: 50%;
+    }
+}

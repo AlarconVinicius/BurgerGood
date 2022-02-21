@@ -1,0 +1,132 @@
+/* Projeto: Site Burger Good */
+/* Arquivo: editPHP.css */
+/* Autor: Vinícius Alarcon Vilela */
+/* Criação: 25/11/2021 */
+:root {
+    --main-color: #ffb200;
+    --hover-main-color: #ffc847;
+    --border: .1rem solid rgba(0,0,0,.1);
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1)
+}
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    list-style: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    scroll-padding-top: 3.75rem;
+    transition: all .2s linear;
+}
+*::selection {
+    background: var(--main-color);
+    color: #fff;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+body {
+    background: rgb(255,178,0);
+    background-color: linear-gradient(180deg, rgba(255,178,0,1) 40%, rgba(240,241,241,1) 100%);
+}
+.btn-voltar {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 5px;
+    background:  var(--main-color);
+    border: solid 1px black;
+    border-radius: 0 0 10px 0;
+    color: #fff;
+    transition: all 0,4s;
+}
+.btn-voltar:hover {
+    background: #000;
+}
+/* SIGN IN */
+.sign-in-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-in-form-container form {
+    background: #fff;
+    border: var(--border);
+    width: 40rem;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    margin: 2rem;
+}
+.sign-in-form-container form h3 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: black;
+    text-align: center;
+}
+.sign-in-form-container form span {
+    display: block;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+
+.sign-in-form-container form .sign-in-box {
+    width: 100%;
+    margin: .7rem 0;
+    font-size: 1.6rem;
+    border: var(--border);
+    border-radius: .5rem;
+    padding: 1rem 1.2rem;
+    color: black;
+    text-transform: none;
+}
+.sign-in-form-container form .sign-in-box::placeholder {
+    text-transform: uppercase;
+}
+.sign-in-form-container form .checkbox {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem 0;
+}
+.sign-in-form-container form .checkbox label {
+    font: 1.6rem;
+    color: grey;
+    cursor: pointer;
+}
+.sign-in-form-container form .checkbox label a {
+    color: var(--main-color);
+    text-decoration: underline;
+}
+.sign-in-form-container form .btn {
+    text-align: center;
+    width: 100%;
+    margin: 1.5rem 0;
+}
+.sign-in-form-container form p {
+    padding-top: .8rem;
+    color: grey;
+    font-size: 1.5rem;
+}
+.sign-in-form-container form p a {
+    color: var(--main-color);
+    text-decoration: underline;
+}
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    border-radius: .5rem;
+    color: #fff;
+    background: var(--main-color);
+    font-size: 1.7rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+.btn:hover {
+    background: var(--hover-main-color);
+}

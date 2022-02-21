@@ -1,0 +1,205 @@
+<!-- Projeto: Site Burger Good -->
+<!-- Arquivo: index.html -->
+<!-- Autor: Vinícius Alarcon Vilela-->
+<!-- Criação: 25/11/2021 -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Good TESTE</title>
+
+    <!-- top icon -->
+    <link rel="shortcut icon" href="img/T-logo.ico" >
+
+    <!-- font awesome link  -->
+    <script src="https://kit.fontawesome.com/6910838e09.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <!-- HEADER SECTION -->
+    <header class="header">
+        <a href="#home">
+            <img src="img/H-logo.png" class="logo" alt="logo" >
+        </a>
+
+        <div id="menu-bar" class='bx bx-menu'></div>
+        
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#sobre">sobre</a>
+            <a href="#cardapio">cardápio</a>
+            <a href="#loja">loja</a>
+            <a href="#contato">contato</a>
+            <a href="#" class="bx bx-moon n-icons" id="darkmode"></a>
+        </nav>
+
+    </header>
+
+    <!-- HOME SECTION -->
+    <section class="home" id="home">
+
+        <div class="home-text">
+            <h1>burger good</h1>
+            <h2>The tasty food of <br> your choice</h2>
+            <a href="cardapio.html" class="h-btn" target="_blank">ver cardápio</a>
+        </div>
+        
+    </section>
+
+    <!-- SOBRE SECTION -->
+    <section class="sobre" id="sobre">
+
+        <!-- <h1 class="heading">quem somos</h1> -->
+
+        <div class="sobre-container">
+            <div class="img-sobre">
+                <img src="img/about.jpg" alt="">
+            </div>
+    
+            <div class="sobre-text">
+                <h3>quem somos</h3>
+                <div class="title">
+                    <h2 class="titulo">por que a burger good?</h2>
+                    <img class="titulo-img" src="img/about 1.png" alt="">
+                </div>
+                <p>Nossa missão é básica: oferecer ao cliente um produto muito bem feito. Para isso, a base de tudo, nossa matéria prima é a melhor e chega na mesa fresquinha. Nosso hambúrguer tem nosso próprio sabor. Feito por quem gosta de hambúrguer para quem gosta de hambúrguer!</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- ESPECIALIDADE SECTION -->
+    <section class="especialidade" id="cardapio">
+
+            <h1 class="heading">conheça nosso cardápio</h1>
+
+        <div class="especialidade-container">
+
+            <!-- Box 1 -->
+            <div class="e-box">
+                    <img src="img/burgers1.png" alt="">
+                <h2>burger</h2>
+            </div>
+            <!-- Box 2 -->
+            <div class="e-box">
+                    <img src="img/entradas.png" alt="">
+                <h2>entradas</h2>
+            </div>
+            <!-- Box 3 -->
+            <div class="e-box">
+                    <img src="img/sobremesas.png" alt="">
+                <h2>sobremesas</h2>
+            </div>
+        </div>
+            <div class="div-e-btn"><a href="cardapio.html" class="h-btn" target="_blank">ver cardápio completo</a></div>
+    </section>
+
+    <!-- LOJA SECTION -->
+    <section class="loja" id="loja">
+
+        <h1 class="heading">nossa loja</h1>
+
+        <div class="loja-container">
+            <div class="img-loja">
+                <img src="img/store.jpg" alt="">
+            </div>
+    
+            <div class="mapa-loja">
+                <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58759.737291555466!2d-43.50036555254261!3d-23.00601010249296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bdcdde21f4c21%3A0xe846d6028e48bd9!2sUniversidade%20Est%C3%A1cio%20da%20S%C3%A1%20-%20Campus%20Recreio!5e0!3m2!1spt-BR!2sbr!4v1634574070404!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- CONTATO SECTION -->
+    <section class="contato" id="contato">
+
+        
+            <div class="contato-container">
+
+                    <h1 class="heading">entre em contato</h1>
+                    
+                <form action="./php/enviarEmail.php" method="POST">
+                    <fieldset>
+                        <div class="name-tel">
+                            <div class="campo">
+                                <input type="text" name="nome" id="nome" class="inputUser" placeholder="Nome" required>
+                            </div>
+                            <div class="campo">
+                                <input type="tel" name="telefone" id="telefone" class="inputUser" placeholder="Telefone" required>
+                            </div>
+                        </div>
+                        <div class="campo">
+                            <input type="email" name="email" id="email"  class="inputUser" placeholder="Email" required>
+                        </div>
+                        <div class="campo">
+                            <textarea name="mensagem" id="mensagem" class="inputUser" placeholder="Mensagem" required></textarea>
+                        </div>
+                        <p class="p-lgpd">Os dados fornecidos neste formulário são protegidos por criptografia de acordo com a Lei Geral de Proteção de Dados</p>
+                        <button class="buttonForm" type="submit">enviar mensagem</button>
+                    </fieldset>
+                </form>
+                
+            </div>
+    </section>
+
+    
+    <!-- BACK TO TOP -->
+    <a href="#" class="to-top">
+        <i class='bx bx-chevron-up scrolltop__icon'></i>
+    </a>   
+
+    <!-- LOADER -->
+    <div class="loader-container">
+        <img src="img/loader.gif" alt="">
+    </div>
+    
+    <!-- FOOTER SECTION -->
+    <section class="footer" id="footer">
+        <div class="footer-box">
+            <h3>mapa do site</h3>
+            <li><a href="#sobre">sobre</a></li>
+            <li><a href="#cardapio">cardápio</a></li>
+            <li><a href="#loja">loja</a></li>
+            <li><a href="#contato">contato</a></li>
+            <li><a href="#faça seu pedido">faça seu pedido</a></li>
+        </div>
+        <div class="footer-box">
+            <h3>burger good</h3>
+            <span>siga nossas redes</span>
+            <div class="f-social">
+                <a href="https://www.instagram.com" target="_blank"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class='bx bxl-facebook' ></i></a>
+                <a href="https://twitter.com" target="_blank"><i class='bx bxl-twitter' ></i></a>
+            </div>
+        </div>
+        <div class="footer-box">
+            <div class="f-logo">
+                <a href="#home"><img src="img/H-logo.png" alt=""></a>
+            </div>
+        </div>
+
+    </section>
+
+     <!-- COPYRIGHT SECTION -->
+
+    <section class="f-copyright">
+         <div class="copyright">
+            <p>&#169; 2021 - burger good - Desenvolvido por Vinícius Alarcon</p>
+        </div>
+    </section>
+
+        
+        
+        
+        
+        <!-- JavaScript -->
+        <script src="js/script.js"></script>
+    </body>
+    
+</html>
